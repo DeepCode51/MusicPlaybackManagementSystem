@@ -1,0 +1,182 @@
+package com.entity.model;
+
+import com.entity.RemengeshouEntity;
+
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.io.Serializable;
+ 
+
+/**
+ * 热门歌手
+ * 接收传参的实体类  
+ *（实际开发中配合移动端接口开发手动去掉些没用的字段， 后端一般用entity就够用了） 
+ * 取自ModelAndView 的model名称
+ * @author 
+ * @email 
+ * @date 2022-03-03 23:14:41
+ */
+public class RemengeshouModel  implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	 			
+	/**
+	 * 头像
+	 */
+	
+	private String touxiang;
+		
+	/**
+	 * 歌手分类
+	 */
+	
+	private String geshoufenlei;
+		
+	/**
+	 * 歌曲流派
+	 */
+	
+	private String gequliupai;
+		
+	/**
+	 * 标签
+	 */
+	
+	private String biaoqian;
+		
+	/**
+	 * 代表作
+	 */
+	
+	private String daibiaozuo;
+		
+	/**
+	 * 歌手介绍
+	 */
+	
+	private String geshoujieshao;
+		
+	/**
+	 * 最近点击时间
+	 */
+		
+	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat 
+	private Date clicktime;
+				
+	
+	/**
+	 * 设置：头像
+	 */
+	 
+	public void setTouxiang(String touxiang) {
+		this.touxiang = touxiang;
+	}
+	
+	/**
+	 * 获取：头像
+	 */
+	public String getTouxiang() {
+		return touxiang;
+	}
+				
+	
+	/**
+	 * 设置：歌手分类
+	 */
+	 
+	public void setGeshoufenlei(String geshoufenlei) {
+		this.geshoufenlei = geshoufenlei;
+	}
+	
+	/**
+	 * 获取：歌手分类
+	 */
+	public String getGeshoufenlei() {
+		return geshoufenlei;
+	}
+				
+	
+	/**
+	 * 设置：歌曲流派
+	 */
+	 
+	public void setGequliupai(String gequliupai) {
+		this.gequliupai = gequliupai;
+	}
+	
+	/**
+	 * 获取：歌曲流派
+	 */
+	public String getGequliupai() {
+		return gequliupai;
+	}
+				
+	
+	/**
+	 * 设置：标签
+	 */
+	 
+	public void setBiaoqian(String biaoqian) {
+		this.biaoqian = biaoqian;
+	}
+	
+	/**
+	 * 获取：标签
+	 */
+	public String getBiaoqian() {
+		return biaoqian;
+	}
+				
+	
+	/**
+	 * 设置：代表作
+	 */
+	 
+	public void setDaibiaozuo(String daibiaozuo) {
+		this.daibiaozuo = daibiaozuo;
+	}
+	
+	/**
+	 * 获取：代表作
+	 */
+	public String getDaibiaozuo() {
+		return daibiaozuo;
+	}
+				
+	
+	/**
+	 * 设置：歌手介绍
+	 */
+	 
+	public void setGeshoujieshao(String geshoujieshao) {
+		this.geshoujieshao = geshoujieshao;
+	}
+	
+	/**
+	 * 获取：歌手介绍
+	 */
+	public String getGeshoujieshao() {
+		return geshoujieshao;
+	}
+				
+	
+	/**
+	 * 设置：最近点击时间
+	 */
+	 
+	public void setClicktime(Date clicktime) {
+		this.clicktime = clicktime;
+	}
+	
+	/**
+	 * 获取：最近点击时间
+	 */
+	public Date getClicktime() {
+		return clicktime;
+	}
+			
+}
